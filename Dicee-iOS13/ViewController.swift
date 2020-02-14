@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var imageDadu1: UIImageView!
+    @IBOutlet weak var imageDadu2: UIImageView!
+    
+    @IBAction func buttonRoll(_ sender: UIButton) {
+        
+        let daduGambar = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ]
+        imageDadu1.image = daduGambar.randomElement()
+        imageDadu2.image = daduGambar.randomElement()
 
+    }
+    
 
 }
 
